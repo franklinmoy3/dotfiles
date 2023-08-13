@@ -14,11 +14,17 @@
   ```
 
 ## Configure Terminal Settings
-- Default to the **Homebrew** profile:
+- Import the **FM_Homebrew** profile:
+  - Save [terminal/FM_Homebrew.terminal](./terminal/FM_Homebrew.terminal)
+  - Open the newly saved terminal file
+    - This will automatically import the profile
+- Default to the **FM_Homebrew** profile (open Terminal settings):
   - General
-    - On startup, open: New window with profile: Homebrew
+    - On startup, open: New window with profile: FM_Homebrew
     - New windows open with: Same Profile, Default Working Directory
     - New tabs open with: Same Profile, Same Working Directory
+  - Profiles
+    - Select the FM_Homebrew profile and then click the "Default" button
 
 ## Enable 1440p HiDPI/Retina
 - Configure resolution, scale, HiDPI, refresh rate, HDR, etc. via **BetterDisplay**
