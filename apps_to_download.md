@@ -8,3 +8,8 @@ Install [Homebrew](https://brew.sh). The one-liner at the bottom of the document
 ```bash
 brew install --cask linearmouse maccy alt-tab betterdisplay
 ```
+
+Barrier is optional, but can be installed with the below shell command:
+```bash
+brew install --cask barrier
+```
