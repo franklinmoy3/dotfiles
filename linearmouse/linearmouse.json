@@ -42,6 +42,9 @@
       }
     },
     {
+      "pointer" : {
+        "disableAcceleration" : true
+      },
       "if" : {
         "device" : {
           "productName" : "USB Receiver",
