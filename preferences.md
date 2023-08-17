@@ -32,6 +32,7 @@
   - Open BetterDisplay and click on the settings icon at the bottom.
   - In the General tab, check the box saying "Automatically launch on login"
 - On an Apple Silicon (e.g. M1 Pro) device, if you encounter any flickering, double-toggle HiDPI on BetterDisplay to mitigate the issue
+  - If the colors ever look off, you can go to the macOS display settings to briefly switch color profiles and the colors will correct themselves.
 
 ## Configure AltTab
 Start AltTab and open its preferences, then perform the below:
