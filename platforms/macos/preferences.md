@@ -14,25 +14,24 @@
   ```
 
 ## Configure Terminal Settings
-- Import the **FM_Homebrew** profile:
-  - Save [terminal/FM_Homebrew.terminal](./terminal/FM_Homebrew.terminal)
+- Import the **FM_Oh-My-Zsh** profile:
+  - Save [terminal/FM_Oh-My-Zsh.terminal](./terminal/FM_Oh-My-Zsh.terminal)
   - Open the newly saved terminal file
     - This will automatically import the profile
-- Default to the **FM_Homebrew** profile (open Terminal settings):
+- Default to the **FM_Oh-My-Zsh** profile (open Terminal settings):
   - General
-    - On startup, open: New window with profile: FM_Homebrew
+    - On startup, open: New window with profile: FM_Oh-My-Zsh
     - New windows open with: Same Profile, Default Working Directory
     - New tabs open with: Same Profile, Same Working Directory
   - Profiles
-    - Select the FM_Homebrew profile and then click the "Default" button
+    - Select the FM_Oh-My-Zsh profile and then click the "Default" button
 
 ## Enable 1440p HiDPI/Retina
 - Configure resolution, scale, HiDPI, refresh rate, HDR, etc. via **BetterDisplay**
-- To automatically apply/persist on restarts, BetterDisplay needs permission to run on login
-  - Open BetterDisplay and click on the settings icon at the bottom.
-  - In the General tab, check the box saying "Automatically launch on login"
+- Set BetterDisplay to automatically launch on login:
+  - Open BetterDisplay settings (gear icon in BetterDisplay modal)
+  - General -> Enable "Automatically launch on login"
 - On an Apple Silicon (e.g. M1 Pro) device, if you encounter any flickering, double-toggle HiDPI on BetterDisplay to mitigate the issue
-  - If the colors ever look off, you can go to the macOS display settings to briefly switch color profiles and the colors will correct themselves.
 
 ## Configure AltTab
 Start AltTab and open its preferences, then perform the below:
@@ -52,19 +51,19 @@ Start AltTab and open its preferences, then perform the below:
 Start Maccy and open its preferences, then perform the below:
 - General
   - Hotkey: CMD+SHIFT+V
-  - Check "Launch at login"
+  - Enable "Launch at login"
   - Search: Fuzzy
-  - Check "Paste automatically"
+  - Enable "Paste automatically"
 - Storage
   - Save: Files, Images, Text
   - Size: 50
 - Appearance
   - Popup at: Cursor
-  - Check "Show menu icon"
+  - Enable "Show menu icon"
   - Select the clipboard icon
 - Advanced
-  - Check "Clear history on quit"
-  - Check "Clear the system clipboard too"
+  - Enable "Clear history on quit"
+  - Enable "Clear the system clipboard too"
 
 ## Configure LinearMouse
 Start LinearMouse and open its settings, then perform the below:

@@ -1,0 +1,82 @@
+{
+  "$schema" : "https:\/\/schema.linearmouse.app\/0.9.3",
+  "schemes" : [
+    {
+      "pointer" : {
+        "acceleration" : 0.125,
+        "speed" : 0.08,
+        "disableAcceleration" : false
+      },
+      "if" : {
+        "device" : {
+          "productName" : "Magic Mouse",
+          "serialNumber" : "08-65-18-9d-03-1b",
+          "productID" : "0x269",
+          "category" : "mouse",
+          "vendorID" : "0x4c"
+        }
+      },
+      "scrolling" : {
+        "speed" : 0,
+        "acceleration" : {
+          "horizontal" : 0.3,
+          "vertical" : 0.6
+        },
+        "reverse" : true,
+        "distance" : "auto"
+      }
+    },
+    {
+      "pointer" : {
+        "acceleration" : 0.6875,
+        "speed" : 0.0689655172413792768,
+        "disableAcceleration" : false
+      },
+      "if" : {
+        "device" : {
+          "productName" : "Apple Internal Keyboard \/ Trackpad",
+          "productID" : "0x343",
+          "category" : "trackpad",
+          "vendorID" : "0x5ac"
+        }
+      },
+      "scrolling" : {
+        "acceleration" : {
+          "vertical" : 1
+        }
+      }
+    },
+    {
+      "pointer" : {
+        "disableAcceleration" : true
+      },
+      "if" : {
+        "device" : {
+          "productName" : "USB Receiver",
+          "productID" : "0xc539",
+          "category" : "mouse",
+          "vendorID" : "0x46d"
+        }
+      },
+      "scrolling" : {
+        "reverse" : true
+      }
+    },
+    {
+      "if" : {
+        "device" : {
+          "productName" : "Magic Trackpad",
+          "serialNumber" : "08-65-18-b9-85-5e",
+          "productID" : "0x265",
+          "category" : "trackpad",
+          "vendorID" : "0x4c"
+        }
+      },
+      "scrolling" : {
+        "acceleration" : {
+          "vertical" : 1
+        }
+      }
+    }
+  ]
+}

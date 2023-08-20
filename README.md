@@ -1,7 +1,8 @@
-# Franklin's macOS Preferences
+# Franklin's dotfiles
+This repository contains settings and preferences for my development environment across different operating systems.
 
-## Apps to Download
-See [apps_to_download.md](./apps_to_download.md)
-
-## macOS Application and System Preferences
-See [preferences.md](./preferences.md)
+## Repository Structure
+- [platforms](./platforms/)
+  - OS-specific setups
+- [zsh](./zsh/)
+  - Personal zsh profile setup
