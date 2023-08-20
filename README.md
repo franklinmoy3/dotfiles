@@ -4,5 +4,5 @@ This repository contains settings and preferences for my development environment
 ## Repository Structure
 - [platforms](./platforms/)
   - OS-specific setups
-- [zsh](./zsh/)
-  - Personal zsh profile setup
+- [shells](./shells/)
+  - Personal profiles for terminal shell setup
