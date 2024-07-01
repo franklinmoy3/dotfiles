@@ -1,0 +1,7 @@
+alias la="ls -lAh"
+
+alias mci="echo mvn clean install && mvn clean install"
+alias mci-debug="echo mvn clean install -Dmaven.surefire.debug && mvn clean install -Dmaven.surefire.debug"
+alias mdt="echo mvn dependency:tree && mvn dependency:tree"
+
+alias vscode="code"

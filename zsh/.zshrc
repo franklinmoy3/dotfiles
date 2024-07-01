@@ -99,12 +99,15 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias mci="echo mvn clean install && mvn clean install"
-alias mci-debug="echo mvn clean install -Dmaven.surefire.debug && mvn clean install -Dmaven.surefire.debug"
-alias mdt="echo mvn dependency:tree && mvn dependency:tree"
+source $HOME/.aliases
 
-# Automatically git pull on shell startup
-if [ -d ".git" ]
+# Add VSCode to PATH
+path+=($HOME/VSCode-linux-x64/bin)
+export PATH
+alias vscode="code"
+
+# If in a git repo, do a pull ()
+if [[ $(git rev-parse --is-inside-work-tree 2> /dev/null) = "true" ]]
 then
 	echo git pull && git pull
 fi
