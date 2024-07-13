@@ -48,17 +48,6 @@ if [[ $? != 0 ]];then
     restore_and_exit_with_code 1 
 fi
 
-# Set zsh as the default shell
-echo -e ${LIGHT_BLUE}Setting zsh as default shell...${NC}
-sudo sh -c 'echo $(which zsh) >> /etc/shells'
-CHANGE_SHELL_CMD="chsh -s $(which zsh)"
-$CHANGE_SHELL_CMD
-
-if [[ $? != 0 ]];then
-    echo -e ${RED}You can perform the chsh yourself later: $CHANGE_SHELL_CMD${NC}
-    CHSH_FAILED=true
-fi
-
 # Install oh-my-zsh
 echo -e ${LIGHT_BLUE}Installing oh-my-zsh...${NC}
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
