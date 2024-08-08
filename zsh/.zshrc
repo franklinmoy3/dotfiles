@@ -106,6 +106,15 @@ path+=($HOME/VSCode-linux-x64/bin)
 export PATH
 alias vscode="code"
 
+function git-branch-cleanup() {
+	echo git fetch -p
+	git fetch -p &&
+	for branch in $(git for-each-ref --format '%(refname) %(upstream:track)' refs/heads | awk '$2 == "[gone]" {sub("refs/heads/", "", $1); print $1}');
+	do
+		git branch -D $branch;
+	done
+}
+
 # If in a git repo, do a pull ()
 if [[ $(git rev-parse --is-inside-work-tree 2> /dev/null) = "true" ]]
 then
