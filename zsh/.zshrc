@@ -101,6 +101,9 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 source $HOME/.aliases
 
+# Pull in .shrc
+source $HOME/.shrc
+
 # Add VSCode to PATH
 path+=($HOME/VSCode-linux-x64/bin)
 export PATH
