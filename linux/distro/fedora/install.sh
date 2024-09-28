@@ -103,12 +103,11 @@ cp ./.zshrc ./.zprofile $HOME
 echo Copying KDE Plasma autostart files...
 cd $REPO_ROOT/linux/desktop/kde
 cp ./kde-autostart.sh $HOME/kde-autostart.sh
-cp ./kde-autostart.sh.desktop $HOME/.config/autostart/kde-autostart.sh.desktop
-
 
 # DONE! Now let the user know of any postrequisite steps
 printf "${LIGHT_BLUE}Almost done. Just some extra manual steps to do after you exit:${NC}\n"
 printf "${LIGHT_BLUE}Make sure to create a new Konsole profile to use zsh.${NC}\n"
+printf "${LIGHT_BLUE}You'll need to manually add a new login script for KDE Autostart.${NC}\n"
 
 if [ -n $CHSH_FAILED ];then
     echo -e ${RED}You should run chsh to change the default shell: $CHANGE_SHELL_CMD${NC}
