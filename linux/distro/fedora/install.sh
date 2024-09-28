@@ -60,12 +60,19 @@ fi
 
 # Install dnf packages
 echo -e ${LIGHT_BLUE}Installing zsh via dnf...${NC}
-sudo dnf check-update && sudo dnf install htop git zsh code -y
+sudo dnf check-update && sudo dnf install htop git zsh -y
 
 if [[ $? != 0 ]];then
     echo -e ${RED}A critical step has failed. Please try again.${NC}
     restore_and_exit_with_code 1 
 fi
+
+# Install VS Code
+echo -e ${LIGHT_BLUE}Preparing to install VSCode by importing MSFT keys...${NC}
+sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
+echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" | sudo tee /etc/yum.repos.d/vscode.repo > /dev/null
+echo -e ${LIGHT_BLUE}Installing VS Code using dnf...${NC}
+sudo dnf install code -y
 
 # Set zsh as the default shell
 echo -e ${LIGHT_BLUE}Setting zsh as default shell...${NC}
