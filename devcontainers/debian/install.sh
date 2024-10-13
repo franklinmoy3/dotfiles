@@ -1,5 +1,9 @@
 #!/bin/bash
 
+##################################### WARNING #################################
+###### THIS INSTALL SCRIPT IS ONLY FOR COPYING AND APPLYING P13N CONFIGS ######
+###### TO SET UP THE IMAGE ITSELF, CONSIDER USING DEV CONTAINER FEATURES ######
+
 RED='\033[0;31m'
 LIGHT_BLUE='\033[1;34m'
 NC='\033[0m' # No Color
@@ -39,18 +43,8 @@ trap 'echo Received SIGINT/SIGTERM... && restore_and_exit_with_code 1' SIGINT SI
 REPO_ROOT=$(git rev-parse --show-toplevel)
 echo dotfiles clone is rooted at \"$REPO_ROOT\"
 
-# Install zsh via apt
-echo -e ${LIGHT_BLUE}Installing zsh via apt...${NC}
-sudo apt update && sudo apt install -y zsh
-
-if [[ $? != 0 ]];then
-    echo -e ${RED}A critical step has failed. Please try again.${NC}
-    restore_and_exit_with_code 1 
-fi
-
-# Install oh-my-zsh
-echo -e ${LIGHT_BLUE}Installing oh-my-zsh...${NC}
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
+# zsh and omz can be configured via Dev Container feature
+#  ghcr.io/devcontainers/features/common-utils
 
 # DIRECTORY CHANGE: Change to zsh folder to apply zsh configs
 cd $REPO_ROOT/zsh
@@ -66,9 +60,5 @@ cp ./.aliases $HOME/.aliases
 # Apply .zshrc
 echo -e ${LIGHT_BLUE}Copying zsh dotfiles...${NC}
 cp ./.zshrc ./.zprofile $HOME
-
-if [ -n $CHSH_FAILED ];then
-    echo -e ${RED}You should run chsh to change the default shell: $CHANGE_SHELL_CMD${NC}
-fi
 
 restore_and_exit_with_code 0

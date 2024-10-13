@@ -111,6 +111,12 @@ echo Copying KDE Plasma autostart files...
 cd $REPO_ROOT/linux/desktop/kde
 cp ./kde-autostart.sh $HOME/kde-autostart.sh
 
+# DIRECTORY CHANGE: Copy containers.conf
+echo Copying containers config...
+cd $REPO_ROOT/linux
+mkdir $HOME/.config/containers
+cp ./containers.conf $HOME/.config/containers/containers.conf
+
 # DONE! Now let the user know of any postrequisite steps
 printf "${LIGHT_BLUE}Almost done. Just some extra manual steps to do after you exit:${NC}\n"
 printf "${LIGHT_BLUE}Make sure to create a new Konsole profile to use zsh.${NC}\n"
