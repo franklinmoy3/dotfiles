@@ -60,7 +60,7 @@ fi
 
 # Install dnf packages
 echo -e ${LIGHT_BLUE}Installing zsh via dnf...${NC}
-sudo dnf check-update && sudo dnf install htop git zsh -y
+sudo dnf check-update && sudo dnf install htop git zsh fcitx5 fcitx5-autostart fcitx5-chinese-addons fcitx5-rime kcm-fcitx5 -y
 
 if [[ $? != 0 ]];then
     echo -e ${RED}A critical step has failed. Please try again.${NC}
