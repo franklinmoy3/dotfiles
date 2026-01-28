@@ -100,6 +100,20 @@ cd $REPO_ROOT/linux
 mkdir -p $HOME/.config/containers
 cp ./containers.conf $HOME/.config/containers/containers.conf
 
+# If WSL, install the Windows Hello PAM (their installer has checks too)
+if grep -qi microsoft /proc/version; then
+    WSL_HELLO_SUDO="wsl-hello-sudo"
+    WSL_HELLO_SUDO_FILENAME="${WSL_HELLO_SUDO}.tar.gz"
+    cd $HOME
+    mkdir $WSL_HELLO_SUDO && cd $WSL_HELLO_SUDO
+    cd wsl-hello-sudo
+    wget -O $WSL_HELLO_SUDO_FILENAME http://github.com/nullpo-head/WSL-Hello-sudo/releases/latest/download/release.tar.gz
+    tar xvf $WSL_HELLO_SUDO_FILENAME
+    rm $WSL_HELLO_SUDO_FILENAME
+    cd release
+    command ./release/install.sh
+fi
+
 # DONE! Now let the user know of any postrequisite steps
 echo -e ${LIGHT_BLUE}Done! Install script completed successfully.${NC}
 
