@@ -111,7 +111,7 @@ if grep -qi microsoft /proc/version; then
     tar xvf $WSL_HELLO_SUDO_FILENAME
     rm $WSL_HELLO_SUDO_FILENAME
     cd release
-    command ./release/install.sh
+    command ./install.sh
 fi
 
 # DONE! Now let the user know of any postrequisite steps
