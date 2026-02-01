@@ -118,6 +118,9 @@ fi
 echo -e ${LIGHT_BLUE}Installing nvm...${NC}
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
 
+# Install pyenv
+curl -fsSL https://pyenv.run | bash
+
 # DONE! Now let the user know of any postrequisite steps
 echo -e ${LIGHT_BLUE}Done! Install script completed successfully.${NC}
 

@@ -107,6 +107,11 @@ path+=($HOME/VSCode-linux-x64/bin)
 export PATH
 alias vscode="code"
 
+# Load pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init - bash)"
+
 function git-branch-cleanup() {
 	echo git fetch -p
 	git fetch -p &&
